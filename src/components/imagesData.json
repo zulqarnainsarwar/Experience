@@ -1,0 +1,33 @@
+[
+  {
+    "path": "../../Benigmara01-min.png",
+    "heading": "EXARTA HQ",
+    "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam",
+    "linkPosition": { "left": "24.8044%", "top": "45%" },
+    "linkPosition2": { "left": "hidden", "top": "hidden" }
+  },
+  {
+    "id": 2,
+    "path": "../../Benigmara02-min.png",
+    "heading": "EXARTA HQ",
+    "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam",
+    "linkPosition": { "left": "51.8044%", "top": "57%" },
+    "linkPosition2": { "left": "hidden", "top": "hidden" }
+  },
+  {
+    "id": 3,
+    "path": "../../Benigmara03-min.png",
+    "heading": "EXARTA HQ",
+    "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam",
+    "linkPosition": { "left": "79%", "top": "50%" },
+    "linkPosition2": { "left": "7.8%", "top": "48%" }
+  },
+  {
+    "id": 4,
+    "path": "../../Benigmara04-min.png",
+    "heading": "EXARTA HQ",
+    "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam",
+    "linkPosition": { "left": "61%", "top": "32%" },
+    "linkPosition2": { "left": "5%", "top": "50%" }
+  }
+]

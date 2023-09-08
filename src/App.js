@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
+import Layout from "./components/Layout";
+import Main from "./components/Main";
+import DiscoverGame from "./components/DiscoverGame";
+import EscapeGame from "./components/EscapeGame";
+import FirstSlide from "./components/ExartaHQ/FirstSlide";
+import SecondSlide from "./components/ExartaHQ/SecondSlide";
+import GameZone from "./components/NewGames/GameZone";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/discover" element={<DiscoverGame />} />
+          /secondslide
+          <Route path="/firstslide" element={<FirstSlide />} />
+          <Route path="/secondslide" element={<SecondSlide />} />
+          <Route path="/escape" element={<EscapeGame />} />
+          <Route path="/newgame" element={<GameZone />} />
+        </Routes>
+      </Layout>
     </div>
   );
 }

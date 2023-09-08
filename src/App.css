@@ -1,3 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: "Sharpin";
+  src: url("/./public/fonts/SHARPIN.otf");
+}
+@font-face {
+  font-family: "Montserat";
+  src: url("/./public/fonts/MontserratAlternates-ExtraLight.otf");
+}
 .App {
   text-align: center;
 }
@@ -23,6 +34,46 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.swiper {
+  width: 100%;
+  height: fit-content;
+}
+
+.swiper-slide img {
+  display: block;
+  /* width: 100%;
+  height: 100%; */
+  object-fit: cover;
+  width: 201px;
+  height: 113px;
+}
+.mySwiper .swiper-slide {
+  border: none; /* Remove the border from all images */
+}
+.swiper-slide-visible {
+  width: 201px !important;
+}
+
+.mySwiper .swiper-slide-active:first-child {
+  border: 2px solid rgb(255, 255, 255); /* Add a border to the active image when it's the first child */
+}
+/* .swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+} */
 
 .App-link {
   color: #61dafb;
