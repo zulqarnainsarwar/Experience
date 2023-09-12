@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import LeftContainer from "../EnigMara/LeftContainer";
 import Heading from "../common/Heading";
-import imagesData from "../imagesData.json";
 import exartaData from "../Data/ExartaData.json";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, FreeMode, Navigation, Thumbs } from "swiper/modules";
@@ -34,7 +33,7 @@ const Exarta = () => {
           <h1 className="text-white text-2xl font-sharpin lg:pb-5 ">
             GAMES ARENA
           </h1>
-          <div className="bg-left_image bg-contain bg-no-repeat lg:h-[644px] h-[400px]   lg:py-10">
+          <div className="bg-left_image bg-cover lg:bg-contain bg-no-repeat lg:h-[644px] h-[400px]   lg:py-10">
             <LeftContainer />
           </div>
         </div>

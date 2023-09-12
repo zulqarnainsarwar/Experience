@@ -14,8 +14,8 @@ const LeftContainer = () => {
         return (
           <Link to={data.url} key={index}>
             <h1
-              className={`text-white text-xl font-montserat py-7 w-[330px] lg:px-10  ${
-                location.pathname === data.url ? "bg-[#FF6600] text-white" : ""
+              className={`text-white text-xl font-montserat py-7 w-[313px] lg:w-[328px] lg:px-10 px-5  ${
+                location.pathname === data.url ? "bg-[#FF6600] text-white " : ""
               }`}
             >
               <span>{data.id} .</span> {data.heading}

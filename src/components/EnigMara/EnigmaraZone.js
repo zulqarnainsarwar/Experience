@@ -38,7 +38,7 @@ const EnigmaraZone = () => {
           <h1 className="text-white text-2xl font-sharpin lg:pb-5 ">
             GAMES ARENA
           </h1>
-          <div className="bg-left_image bg-contain bg-no-repeat lg:h-[644px] h-[400px]   lg:py-10">
+          <div className="bg-left_image bg-cover lg:bg-contain bg-no-repeat lg:h-[644px] h-[400px]   lg:py-10">
             <LeftContainer />
           </div>
         </div>
@@ -48,15 +48,11 @@ const EnigmaraZone = () => {
               {" "}
               SCENES LIST
             </h2>
-            <div className="bg-border_image  bg-no-repeat  bg-100% lg:w-[1307px] lg:h-[500px] ">
+            <div className="bg-border_image  bg-no-repeat  bg-100% lg:w-[1307px] lg:h-[500px] w-[480px] ">
               <div className="flex justify-center items-center relative  ">
                 <img
                   src={activeImagePath}
-                  style={{
-                    width: "99%",
-                    marginBottom: "0.1vw",
-                    marginTop: "0.1vw",
-                  }}
+                  className="w-[99%] mt-[0.1vw] mb-[0.1vw] object-fill"
                   alt="mainImage"
                 />
                 <Heading
@@ -65,7 +61,7 @@ const EnigmaraZone = () => {
                   secn={secn}
                   top={70}
                   left={4}
-                  className="absolute w-[65vw] "
+                  className="absolute "
                 />
                 <Modal
                   handleCloseModal={handleCloseModal}
