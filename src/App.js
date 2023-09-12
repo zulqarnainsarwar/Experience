@@ -7,7 +7,8 @@ import DiscoverGame from "./components/DiscoverGame";
 import EscapeGame from "./components/EscapeGame";
 import FirstSlide from "./components/ExartaHQ/FirstSlide";
 import SecondSlide from "./components/ExartaHQ/SecondSlide";
-import GameZone from "./components/NewGames/GameZone";
+import EnigmaraZone from "./components/EnigMara/EnigmaraZone";
+import Exarta from "./components/ExartaHQ/Exarta";
 
 function App() {
   return (
@@ -16,11 +17,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/discover" element={<DiscoverGame />} />
-          /secondslide
           <Route path="/firstslide" element={<FirstSlide />} />
           <Route path="/secondslide" element={<SecondSlide />} />
           <Route path="/escape" element={<EscapeGame />} />
-          <Route path="/newgame" element={<GameZone />} />
+          <Route path="/EnigmaraZone" element={<EnigmaraZone />} />
+          <Route path="/Exarta" element={<Exarta />} />
         </Routes>
       </Layout>
     </div>

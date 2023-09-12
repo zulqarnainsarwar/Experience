@@ -7,7 +7,7 @@
 }
 @font-face {
   font-family: "Montserat";
-  src: url("/./public/fonts/MontserratAlternates-ExtraLight.otf");
+  src: url("/./public/fonts/Montserrat-Regular.ttf");
 }
 .App {
   text-align: center;
@@ -38,7 +38,9 @@
   width: 100%;
   height: fit-content;
 }
-
+.swiper-wrapper {
+  display: flex;
+}
 .swiper-slide img {
   display: block;
   /* width: 100%;

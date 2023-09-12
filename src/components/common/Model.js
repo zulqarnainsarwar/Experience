@@ -3,7 +3,7 @@ import React from "react";
 const Modal = ({ handleCloseModal, showModal }) => {
   return (
     showModal && (
-      <div className="left-[calc((100vw-400px)/2)] top-[calc((100vh-400px)/2)] w-[400px] h-[400px] bg-innerform_image bg-cover   rounded-xl fixed z-50">
+      <div className="left-[calc((100vw-400px)/2)] top-[calc((100vh-400px)/2)]  w-[400px] h-[400px] bg-innerform_image bg-cover   rounded-xl fixed z-50">
         <div className="bg-form_image bg-cover">
           <button
             class="absolute -top-1 right-0 text-xl bg-transparent cursor-pointer text-center text-black bg-white w-7 h-7"
@@ -42,7 +42,7 @@ const Modal = ({ handleCloseModal, showModal }) => {
             </div>
             <div className="flex items-center justify-between ">
               <button
-                class="bg-[#6445B4]   text-white font-bold py-2 px-8 rounded focus:outline-none focus:shadow-outline"
+                class="bg-[#333333]   text-white font-bold py-2 px-8 rounded focus:outline-none focus:shadow-outline"
                 type="submit"
               >
                 Submit

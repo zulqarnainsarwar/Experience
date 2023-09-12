@@ -1,33 +1,61 @@
 [
   {
     "path": "../../Benigmara01-min.png",
-    "heading": "EXARTA HQ",
+    "secn": "SCENE 01",
+    "heading": "ENIGMARA",
     "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam",
-    "linkPosition": { "left": "24.8044%", "top": "45%" },
-    "linkPosition2": { "left": "hidden", "top": "hidden" }
+    "linkPosition": [{ "left": "25.8044%", "top": "40%" }]
   },
   {
     "id": 2,
     "path": "../../Benigmara02-min.png",
-    "heading": "EXARTA HQ",
+    "secn": "SCENE 02",
+    "heading": "ENIGMARA",
     "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam",
-    "linkPosition": { "left": "51.8044%", "top": "57%" },
-    "linkPosition2": { "left": "hidden", "top": "hidden" }
+    "linkPosition": [{ "left": "55.8044%", "top": "57%" }]
   },
   {
     "id": 3,
     "path": "../../Benigmara03-min.png",
-    "heading": "EXARTA HQ",
+    "secn": "SCENE 03",
+    "heading": "ENIGMARA",
     "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam",
-    "linkPosition": { "left": "79%", "top": "50%" },
-    "linkPosition2": { "left": "7.8%", "top": "48%" }
+    "linkPosition": [
+      { "left": "85%", "top": "50%" },
+      { "left": "7.8%", "top": "48%" }
+    ]
   },
   {
     "id": 4,
     "path": "../../Benigmara04-min.png",
-    "heading": "EXARTA HQ",
+    "secn": "SCENE 04",
+    "heading": "ENIGMARA",
     "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam",
-    "linkPosition": { "left": "61%", "top": "32%" },
-    "linkPosition2": { "left": "5%", "top": "50%" }
+    "linkPosition": [
+      { "left": "65%", "top": "18%" },
+      { "left": "2%", "top": "45%" }
+    ]
+  },
+  {
+    "id": 5,
+    "path": "../../Benigmara05-min.png",
+    "secn": "SCENE 05",
+    "heading": "ENIGMARA",
+    "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam",
+    "linkPosition": [
+      { "left": "76.88%", "top": "22%" },
+      { "left": "20%", "top": "40%" }
+    ]
+  },
+  {
+    "id": 6,
+    "path": "../../Benigmara06-min.png",
+    "secn": "SCENE 06",
+    "heading": "ENIGMARA",
+    "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam",
+    "linkPosition": [
+      { "left": "85%", "top": "40%" },
+      { "left": "16%", "top": "55%" }
+    ]
   }
 ]

@@ -9,10 +9,16 @@ module.exports = {
         hero_three: "url('././images/Benigmara03-min.png')",
         skelton_load: "url('././images/skeltonloader.png')",
         border_image: "url('././images/border.png')",
-        left_image: "url('././images/LeftPath.png')",
+        left_image: "url('././images/left_image.png')",
         top_border: "url('././images/upper line.png')",
         form_image: "url('././images/Form.png')",
         innerform_image: "url('././images/Form_Inner.png')",
+      },
+      backgroundSize: {
+        auto: "auto",
+        cover: "cover",
+        contain: "contain",
+        "100%": "100%",
       },
       fontFamily: {
         sharpin: ["Sharpin"],

@@ -1,12 +1,15 @@
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
+// import { Autoplay, Navigation, Thumbs } from "swiper";
+
 import { Autoplay, FreeMode, Navigation, Thumbs } from "swiper/modules";
 import Modal from "../common/Model";
 import Heading from "../common/Heading";
-import imagesData from "../../components/imagesData.json";
-import { EffectCoverflow, Pagination } from "swiper";
-const GameZone = () => {
+import imagesData from "../imagesData.json";
+import CustomLinkArrow from "../common/CustomLinkArrow";
+import LeftContainer from "./LeftContainer";
+const EnigmaraZone = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [showModal, setModalShow] = useState(false);
@@ -25,35 +28,41 @@ const GameZone = () => {
     heading,
     text,
     linkPosition,
-    linkPosition2,
+    secn,
   } = imagesData[activeImageIndex];
 
   return (
     <div className="h-full w-full overflow-auto">
-      <div className="pt-5 w-full flex-col flex lg:flex-row  px-10 overflow-hidden">
+      <div className="pt-5 w-full flex-col flex lg:flex-row  px-10 ">
         <div className="w-full lg:w-1/5 lg:pl-10  ">
-          <h1 className="text-white text-2xl font-sharpin pb-20">
+          <h1 className="text-white text-2xl font-sharpin lg:pb-5 ">
             GAMES ARENA
           </h1>
-          <div className="bg-left_image bg-contain bg-no-repeat h-[644px]  px-10 py-10">
-            <h1 className="text-white text-xl font-montserat ">
-              {" "}
-              1. EXARTA HQ{" "}
-            </h1>
+          <div className="bg-left_image bg-contain bg-no-repeat lg:h-[644px] h-[400px]   lg:py-10">
+            <LeftContainer />
           </div>
         </div>
-        <div className="w-full lg:w-4/5 ml-10 ">
-          <div className="relative ">
-            <div className="bg-border_image bg-contain bg-no-repeat !h-[64vh] !w-[72vw]">
-              <h2 className="pl-10  font-sharpin text-2xl text-white">
-                {" "}
-                SCENES LIST
-              </h2>
-              <div className="flex justify-center items-center ">
-                <img src={activeImagePath} className=" object-fit mt-24 " />
+        <div className="w-full lg:w-4/5 lg:ml-10 ">
+          <div className="  lg:py-0 py-5">
+            <h2 className="lg:pl-20 lg:pb-5 font-sharpin text-2xl text-white">
+              {" "}
+              SCENES LIST
+            </h2>
+            <div className="bg-border_image  bg-no-repeat  bg-100% lg:w-[1307px] lg:h-[500px] ">
+              <div className="flex justify-center items-center relative  ">
+                <img
+                  src={activeImagePath}
+                  style={{
+                    width: "99%",
+                    marginBottom: "0.1vw",
+                    marginTop: "0.1vw",
+                  }}
+                  alt="mainImage"
+                />
                 <Heading
                   text={heading}
                   paragraph={text}
+                  secn={secn}
                   top={70}
                   left={4}
                   className="absolute w-[65vw] "
@@ -62,14 +71,14 @@ const GameZone = () => {
                   handleCloseModal={handleCloseModal}
                   showModal={showModal}
                 />
-                {linkPosition.left !== "hidden" && (
+                {linkPosition.map((position) => (
                   <Link
                     className="block z-20 w-[11px] h-[11px] cursor-pointer"
                     onClick={() => setModalShow(true)}
                     style={{
                       position: "absolute",
-                      left: linkPosition.left,
-                      top: linkPosition.top,
+                      left: position.left,
+                      top: position.top,
                     }}
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
@@ -78,23 +87,41 @@ const GameZone = () => {
                       <div className="h-4 w-4 bg-white rounded-full" />
                     </div>
                   </Link>
+                ))}
+
+                {activeImageIndex !== imagesData.length - 1 && (
+                  <div
+                    onClick={(e) => {
+                      e.preventDefault();
+                      if (activeImageIndex < imagesData.length - 1) {
+                        setActiveImageIndex((prev) => prev + 1);
+                      }
+                    }}
+                  >
+                    <CustomLinkArrow
+                      top={65}
+                      right={14}
+                      text={"Next Billboard"}
+                      rotate={0}
+                      link={"/"}
+                    />
+                  </div>
                 )}
-                {linkPosition2.left !== "hidden" && (
-                  <Link
-                    className="block z-20 w-[11px] h-[11px] cursor-pointer"
-                    onClick={() => setModalShow(true)}
-                    style={{
-                      position: "absolute",
-                      left: linkPosition2.left,
-                      top: linkPosition2.top,
+                {activeImageIndex > 0 && (
+                  <div
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setActiveImageIndex((prev) => prev - 1);
                     }}
-                    onMouseEnter={() => setIsHovered(true)}
-                    onMouseLeave={() => setIsHovered(false)}
                   >
-                    <div className="h-20 w-20 bg-white/5 rounded-full flex justify-center items-center animation-pulse">
-                      <div className="h-4 w-4 bg-white rounded-full" />
-                    </div>
-                  </Link>
+                    <CustomLinkArrow
+                      top={60}
+                      left={8}
+                      text={"Previous Billboard"}
+                      rotate={180}
+                      link={"/"}
+                    />
+                  </div>
                 )}
               </div>
             </div>
@@ -105,7 +132,6 @@ const GameZone = () => {
           </div>
 
           <Swiper
-            effect={"coverflow"}
             onSwiper={setThumbsSwiper}
             coverflowEffect={{
               rotate: 40,
@@ -116,11 +142,22 @@ const GameZone = () => {
             }}
             loop={true}
             spaceBetween={10}
-            slidesPerView={4}
             freeMode={true}
             watchSlidesProgress={true}
-            modules={[FreeMode, Navigation, Thumbs]}
-            className="  cursor-pointer  !px-10  "
+            modules={[FreeMode, Navigation, Thumbs, Autoplay]}
+            className="  cursor-pointer  !px-10 !py-5 "
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            breakpoints={{
+              320: {
+                slidesPerView: 2,
+              },
+              768: {
+                slidesPerView: 3,
+              },
+              1024: {
+                slidesPerView: 6,
+              },
+            }}
           >
             {imagesData.map((imageData, index) => (
               <SwiperSlide
@@ -131,6 +168,7 @@ const GameZone = () => {
                 <img
                   src={imageData.path}
                   className=" object-cover rounded-lg"
+                  alt="BottomImage"
                 />
               </SwiperSlide>
             ))}
@@ -141,4 +179,4 @@ const GameZone = () => {
   );
 };
 
-export default GameZone;
+export default EnigmaraZone;
