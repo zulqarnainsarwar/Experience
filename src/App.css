@@ -89,3 +89,26 @@
     transform: rotate(360deg);
   }
 }
+
+@media screen and (min-width:375px) and (max-width:576px) {
+  .text-div{
+    top: calc(70% - 30%)!important;
+  }
+  .text-span{
+    top:0!important;
+    margin-top: -36px!important;
+  }
+  .text-heading{
+    padding-top: 0px;
+  }
+  .text-paragraph{
+    padding-top: 0px;
+    font-size: 10px!important;
+    line-height: 10px;
+  }
+}
+@media screen and (min-width:576px) and (max-width:768px) {
+  .text-div{
+    top: calc(70% - 25%)!important;
+  }
+}
